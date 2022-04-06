@@ -1,0 +1,77 @@
+@import "_common";  //.scss확장자 생략 가능
+
+$wid : 1300px;
+$c-point : #fed136;
+$c-white : #fff;
+
+header{
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 20px;
+    div{
+        width: $wid; margin: 0 auto;
+        display: flex;
+        justify-content: space-between; //양끝으로
+        align-items: center;   //로고, 네비 세로 중앙정렬
+        h1{
+            a{color: $c-point;}
+        }
+        nav{
+            a{color: $c-white; padding: 0 30px;}
+        }
+    }
+}
+
+
+.visual{
+    > figure{
+        position: relative;
+        img{width: 100%;}
+        figcaption{
+            position: absolute;
+            left: 0; top: 0;
+            color: #fff;
+            width: 100%; height: 100%;
+
+            display: flex;   //영역 설정 반드시 필요(width: 100%; height: 100%;)
+            justify-content: center;
+            align-items: center;
+
+            font-size: 5rem;
+            text-transform: uppercase;  //대문자로 바꿔줌
+        }
+    }
+}
+
+
+.work{
+    text-align: center;
+    background-color: #f7f7f7;
+    padding: 150px 0;
+    > h2{}
+    > p{}
+    > ul{
+        width: $wid; margin: 60px auto 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 105px 0;
+        li{
+            margin-bottom: 3.5%;   //3.5%=(100-31%(사진width)*3)/2
+            width: 31%;
+            >figure{
+                > img{width: 100%;}
+                >figcaption{
+                    padding: 7% 0;
+                    background-color: $c-white;
+                    > b{}
+                    > p{}
+                }
+                
+            }
+        }
+        
+    }
+}

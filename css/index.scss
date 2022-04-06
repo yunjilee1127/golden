@@ -1,0 +1,68 @@
+@import "_common";  //.scss확장자 생략 가능
+
+@media(min-width:768px){
+    .work{
+        text-align: center;
+        background-color: #f7f7f7;
+        padding: 150px 0;
+        > h2{}
+        > p{}
+        > ul{
+            width: $wid; margin: 60px auto 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 105px 0;
+            li{
+                margin-bottom: 3.5%;   //3.5%=(100-31%(사진width)*3)/2
+                width: 31%;
+                >figure{
+                    > img{width: 100%;}
+                    >figcaption{
+                        padding: 7% 0;
+                        background-color: $c-white;
+                        > b{}
+                        > p{}
+                    }
+                    
+                }
+            }
+            
+        }
+    }
+}
+
+
+//미디어 쿼리는 하단부에(순서가 중요. 영역을 분리하고는 순서 무관)
+@media(max-width:767px){
+    $wid : 100%;
+    .work{
+        text-align: center;
+        background-color: #f7f7f7;
+        padding: 150px 0;
+        > h2{}
+        > p{}
+        > ul{
+            width: $wid; margin: 60px auto 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 105px 0;
+            li{
+                margin-bottom: 3.5%;   //3.5%=(100-31%(사진width)*3)/2
+                width: 100%;
+                >figure{
+                    > img{width: 100%;}
+                    >figcaption{
+                        padding: 7% 0;
+                        background-color: $c-white;
+                        > b{}
+                        > p{}
+                    }
+                    
+                }
+            }
+            
+        }
+    }
+}
